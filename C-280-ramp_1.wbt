@@ -1,0 +1,52 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/OldPlywood.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.23275129792490326 0.2105687406946409 0.949467028788544 1.7222391936049255
+  position -0.23746482521102014 -2.038624971557639 1.3029026844960043
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF Slope Solid {
+  translation -0.0463166 0 0.138095
+  rotation 0 1 0 0.4
+  children [
+    Shape {
+      appearance OldPlywood {
+      }
+      geometry Box {
+        size 0.8 0.2 0.05
+      }
+    }
+  ]
+}
+DEF myRobot Robot {
+  translation -0.0428361 0 0.218679
+  rotation 0 1 0 0.4
+  children [
+    Pose {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0.333333 0
+            metalness 0
+          }
+          geometry Cone {
+            bottomRadius 0.075
+            height 0.1
+          }
+        }
+      ]
+    }
+  ]
+}
